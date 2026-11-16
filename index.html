@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automação Residencial com IoT | Pesquisa Exploratória</title>
+  <meta name="description" content="Infográfico de pesquisa exploratória sobre automação residencial com Internet das Coisas (IoT): fonte, confiabilidade, termos técnicos, resumo e proposta prática.">
+  <meta name="author" content="[SEU NOME]">
+  <meta name="theme-color" content="#0A1828">
+
+  <!-- Open Graph (prévia ao compartilhar o link) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Automação Residencial com IoT">
+  <meta property="og:description" content="Pesquisa exploratória em Desenvolvimento de Sistemas: central de automação residencial de baixo custo com ESP32.">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Estilos do projeto -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-md sticky-top site-nav" aria-label="Navegação principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#topo">
+        <i class="bi bi-house-gear-fill text-accent" aria-hidden="true"></i>
+        <span class="fw-semibold">IoT Residencial</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#fonte">Fonte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#termos">Termos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funcionamento">Funcionamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resumo">Resumo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proposta">Proposta</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="topo" class="hero">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow mb-3">Pesquisa exploratória · Desenvolvimento de Sistemas</p>
+          <h1 class="display-title mb-3">Automação Residencial com <span class="text-accent">IoT</span></h1>
+          <p class="lead text-soft mb-4">Como uma central de baixo custo pode deixar a casa inteligente ao alcance de mais pessoas.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-accent" href="assets/downloads/infografico-automacao-residencial-iot.png" download>
+              <i class="bi bi-image me-1" aria-hidden="true"></i> Baixar PNG
+            </a>
+            <a class="btn btn-outline-light" href="assets/downloads/infografico-automacao-residencial-iot.pdf" download>
+              <i class="bi bi-filetype-pdf me-1" aria-hidden="true"></i> Baixar PDF
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center d-none d-lg-block">
+          <svg class="hero-art" viewBox="0 0 260 240" fill="none" aria-hidden="true">
+            <circle cx="130" cy="130" r="108" stroke="#1E3A55" stroke-width="2"/>
+            <circle cx="130" cy="130" r="76" stroke="#1E3A55" stroke-width="2"/>
+            <path d="M62 132 L130 72 L198 132" stroke="#EAF2F8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M78 120 V188 H182 V120" stroke="#EAF2F8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="wave wave-1" d="M110 150 a28 28 0 0 1 40 0" stroke="#2EC4D6" stroke-width="7" stroke-linecap="round"/>
+            <path class="wave wave-2" d="M98 136 a46 46 0 0 1 64 0" stroke="#2EC4D6" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="130" cy="168" r="7" fill="#2EC4D6"/>
+            <circle cx="236" cy="96" r="9" fill="#F5B841"/>
+            <circle cx="26" cy="168" r="9" fill="#2EC4D6"/>
+            <circle cx="168" cy="230" r="7" fill="#F5B841"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container pb-5">
+
+    <!-- 1. Título -->
+    <section class="info-card p-4 p-md-5 mb-4" aria-labelledby="h-titulo">
+      <h2 id="h-titulo" class="section-label"><span class="step">1</span> Título do texto pesquisado</h2>
+      <p class="article-title mb-0">Controle Residencial de Dispositivos Infravermelho e de Iluminação Utilizando um Módulo Central de Baixo Custo</p>
+    </section>
+
+    <!-- 2 e 3. Fonte e Confiabilidade -->
+    <div id="fonte" class="row g-4 mb-4">
+      <div class="col-md-6">
+        <section class="info-card h-100 p-4" aria-labelledby="h-fonte">
+          <h2 id="h-fonte" class="section-label"><span class="step">2</span> Fonte</h2>
+          <p>Anais da XII Escola Regional de Informática de Mato Grosso (ERI-MT 2023) – SBC OpenLib</p>
+          <p class="mb-2">
+            <a class="link-accent text-break" href="https://sol.sbc.org.br/index.php/eri-mt/article/view/28050" target="_blank" rel="noopener">
+              <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i>sol.sbc.org.br/index.php/eri-mt/article/view/28050
+            </a>
+          </p>
+          <p class="small text-soft mb-0">DOI: <a class="link-accent" href="https://doi.org/10.5753/eri-mt.2023.236366" target="_blank" rel="noopener">10.5753/eri-mt.2023.236366</a></p>
+        </section>
+      </div>
+      <div class="col-md-6">
+        <section class="info-card h-100 p-4" aria-labelledby="h-conf">
+          <h2 id="h-conf" class="section-label"><span class="step">3</span> Confiabilidade</h2>
+          <p>Jorge Luiz P. Oliveira e Thais Reggina Kempner – Faculdade de Engenharia de Várzea Grande (UFMT)</p>
+          <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">
+            <li class="chip"><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>28/11/2023</li>
+            <li class="chip"><i class="bi bi-patch-check me-1" aria-hidden="true"></i>Publicado pela SBC</li>
+            <li class="chip"><i class="bi bi-link-45deg me-1" aria-hidden="true"></i>Com DOI</li>
+            <li class="chip"><i class="bi bi-journal-text me-1" aria-hidden="true"></i>Referências bibliográficas</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- 4. Termos técnicos -->
+    <section id="termos" class="mb-4" aria-labelledby="h-termos">
+      <h2 id="h-termos" class="section-label"><span class="step">4</span> Termos técnicos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="info-card h-100 p-4">
+            <i class="bi bi-cpu term-icon" aria-hidden="true"></i>
+            <h3 class="term-title">ESP32</h3>
+            <p class="text-soft mb-0">Placa com microcontrolador e Wi-Fi integrado. É o “cérebro” da central: recebe os comandos e aciona os dispositivos.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="info-card h-100 p-4">
+            <i class="bi bi-toggle-on term-icon" aria-hidden="true"></i>
+            <h3 class="term-title">Relé</h3>
+            <p class="text-soft mb-0">Interruptor acionado eletricamente. Permite que o microcontrolador ligue e desligue lâmpadas e tomadas.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="info-card h-100 p-4">
+            <i class="bi bi-diagram-3 term-icon" aria-hidden="true"></i>
+            <h3 class="term-title">MQTT (Broker)</h3>
+            <p class="text-soft mb-0">Protocolo leve de mensagens da IoT. O broker recebe e repassa as mensagens entre app, assistentes de voz e central.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section id="funcionamento" class="flow-card p-4 p-md-5 mb-4" aria-labelledby="h-flow">
+      <h2 id="h-flow" class="section-label">Como o sistema funciona</h2>
+      <ol class="flow list-unstyled mb-0">
+        <li class="flow-step">
+          <i class="bi bi-phone" aria-hidden="true"></i>
+          <strong>App / Voz</strong>
+          <span>Alexa e Google</span>
+        </li>
+        <li class="flow-step">
+          <i class="bi bi-cloud" aria-hidden="true"></i>
+          <strong>MQTT</strong>
+          <span>Broker na nuvem</span>
+        </li>
+        <li class="flow-step flow-step-main">
+          <i class="bi bi-cpu" aria-hidden="true"></i>
+          <strong>ESP32</strong>
+          <span>Central de controle</span>
+        </li>
+        <li class="flow-step">
+          <i class="bi bi-lightbulb text-warm" aria-hidden="true"></i>
+          <strong>Casa</strong>
+          <span>Luz, tomadas, TV e ar</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 5. Resumo -->
+    <section id="resumo" class="info-card p-4 p-md-5 mb-4" aria-labelledby="h-resumo">
+      <h2 id="h-resumo" class="section-label"><span class="step">5</span> Resumo</h2>
+      <p class="fs-5 lh-lg mb-0">O artigo apresenta uma central de automação residencial de baixo custo, baseada no ESP32, que controla iluminação, tomadas e aparelhos infravermelho (TV e ar-condicionado) via smartphone, interruptores e assistentes de voz, buscando tornar a casa inteligente acessível a famílias de baixa renda e pessoas com deficiência.</p>
+    </section>
+
+    <!-- 6. Proposta prática -->
+    <section id="proposta" class="proposal-card p-4 p-md-5" aria-labelledby="h-proposta">
+      <h2 id="h-proposta" class="section-label section-label-dark"><span class="step step-dark">6</span> Proposta prática</h2>
+      <p class="proposal-title">App “Casa Econômica”</p>
+      <p class="fs-5 mb-4">Aplicativo integrado a tomadas inteligentes com ESP32 e sensores de corrente.</p>
+      <ul class="row g-3 list-unstyled mb-0">
+        <li class="col-sm-6"><div class="feature"><i class="bi bi-currency-dollar" aria-hidden="true"></i> Consumo de cada aparelho mostrado em reais</div></li>
+        <li class="col-sm-6"><div class="feature"><i class="bi bi-power" aria-hidden="true"></i> Desliga sozinho aparelhos em standby</div></li>
+        <li class="col-sm-6"><div class="feature"><i class="bi bi-alarm" aria-hidden="true"></i> Agenda o ar-condicionado e alerta gasto excessivo</div></li>
+        <li class="col-sm-6"><div class="feature"><i class="bi bi-person-wheelchair" aria-hidden="true"></i> Modo simples para idosos: botões grandes e voz</div></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2 small text-soft">
+      <span>[SEU NOME] · Etec · Desenvolvimento de Sistemas</span>
+      <span>2026</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

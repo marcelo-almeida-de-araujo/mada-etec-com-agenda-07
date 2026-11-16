@@ -1,0 +1,216 @@
+/* =========================================================
+   Automação Residencial com IoT — estilos do projeto
+   Paleta: azul-marinho (tecnologia), ciano (conectividade),
+   âmbar (luz / economia de energia)
+   ========================================================= */
+
+:root {
+  --iot-bg: #0A1828;
+  --iot-surface: #112A42;
+  --iot-surface-2: #0F2238;
+  --iot-line: #1E3A55;
+  --iot-text: #EAF2F8;
+  --iot-soft: #C3D3E0;
+  --iot-muted: #9FB3C4;
+  --iot-accent: #2EC4D6;
+  --iot-accent-hover: #5FD8E6;
+  --iot-warm: #F5B841;
+  --iot-warm-light: #FFF4D6;
+  --iot-ink: #1A1406;
+
+  /* Integração com as variáveis do Bootstrap */
+  --bs-body-bg: var(--iot-bg);
+  --bs-body-color: var(--iot-text);
+  --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bs-link-color-rgb: 46, 196, 214;
+  --bs-link-hover-color-rgb: 95, 216, 230;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--iot-bg);
+  --bs-body-color: var(--iot-text);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { background: var(--iot-bg); color: var(--iot-text); }
+
+/* ---------- Utilitários ---------- */
+.text-accent { color: var(--iot-accent) !important; }
+.text-warm   { color: var(--iot-warm) !important; }
+.text-soft   { color: var(--iot-soft) !important; }
+
+.link-accent { color: var(--iot-accent); text-underline-offset: 3px; }
+.link-accent:hover, .link-accent:focus { color: var(--iot-accent-hover); }
+
+.skip-link {
+  position: absolute; top: 8px; left: 8px; z-index: 2000;
+  background: var(--iot-accent); color: var(--iot-bg);
+  padding: 8px 16px; border-radius: 8px; font-weight: 600;
+}
+
+:focus-visible { outline: 3px solid var(--iot-warm); outline-offset: 3px; }
+
+/* ---------- Navegação ---------- */
+.site-nav {
+  background: rgba(10, 24, 40, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--iot-line);
+}
+.site-nav .navbar-brand { color: var(--iot-text); }
+.site-nav .nav-link { color: var(--iot-soft); font-weight: 500; }
+.site-nav .nav-link:hover, .site-nav .nav-link:focus { color: var(--iot-accent); }
+
+/* ---------- Cabeçalho ---------- */
+.eyebrow {
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--iot-accent);
+}
+.display-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700; letter-spacing: -0.02em; line-height: 1;
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+}
+.hero-art { width: 100%; max-width: 280px; height: auto; }
+
+.btn-accent {
+  --bs-btn-bg: var(--iot-accent);
+  --bs-btn-border-color: var(--iot-accent);
+  --bs-btn-color: var(--iot-bg);
+  --bs-btn-hover-bg: var(--iot-accent-hover);
+  --bs-btn-hover-border-color: var(--iot-accent-hover);
+  --bs-btn-hover-color: var(--iot-bg);
+  --bs-btn-active-bg: var(--iot-accent-hover);
+  --bs-btn-active-color: var(--iot-bg);
+  font-weight: 600;
+}
+.btn { min-height: 44px; display: inline-flex; align-items: center; }
+
+/* Animação das ondas do Wi-Fi */
+.wave { animation: pulse 2.4s ease-in-out infinite; }
+.wave-2 { animation-delay: 0.4s; }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Cards ---------- */
+.info-card {
+  background: var(--iot-surface);
+  border-radius: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+article.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.section-label {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.95rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--iot-muted);
+  margin-bottom: 1rem;
+}
+.step {
+  flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--iot-accent); color: var(--iot-bg);
+  font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.article-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600; line-height: 1.25;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.chip {
+  border: 2px solid var(--iot-warm); color: var(--iot-warm);
+  border-radius: 999px; padding: 4px 14px;
+  font-size: 0.9rem; font-weight: 600;
+}
+
+.term-icon { font-size: 2.6rem; color: var(--iot-accent); line-height: 1; }
+.term-title {
+  font-family: "Space Grotesk", sans-serif; font-weight: 700;
+  font-size: 1.7rem; margin: 0.75rem 0;
+}
+
+/* ---------- Fluxo "Como funciona" ---------- */
+.flow-card {
+  background: var(--iot-surface-2);
+  border: 2px solid var(--iot-line);
+  border-radius: 24px;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  counter-reset: none;
+}
+.flow-step {
+  position: relative;
+  background: var(--iot-surface);
+  border-radius: 18px;
+  padding: 20px 14px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 4px; text-align: center;
+}
+.flow-step i { font-size: 2rem; }
+.flow-step span { font-size: 0.9rem; color: var(--iot-muted); }
+.flow-step-main { background: var(--iot-accent); color: var(--iot-bg); }
+.flow-step-main span { color: var(--iot-bg); font-weight: 500; }
+
+/* Setas entre as etapas: para baixo no celular, para o lado no desktop */
+.flow-step:not(:last-child)::after {
+  content: "\F128"; /* bi-arrow-down */
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 50%; bottom: -34px; transform: translateX(-50%);
+  color: var(--iot-accent); font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .flow { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 44px; }
+  .flow-step:not(:last-child)::after {
+    content: "\F138"; /* bi-arrow-right */
+    left: auto; right: -34px; bottom: auto; top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* ---------- Proposta ---------- */
+.proposal-card {
+  background: var(--iot-warm); color: var(--iot-ink);
+  border-radius: 24px;
+}
+.section-label-dark { color: var(--iot-ink); font-weight: 700; }
+.step-dark { background: var(--iot-ink); color: var(--iot-warm); }
+.proposal-title {
+  font-family: "Space Grotesk", sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem); line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+.feature {
+  background: var(--iot-warm-light);
+  border-radius: 16px; padding: 14px 18px; height: 100%;
+  font-weight: 500;
+  display: flex; align-items: center; gap: 10px;
+}
+.feature i { font-size: 1.3rem; }
+
+/* ---------- Rodapé ---------- */
+.site-footer { border-top: 1px solid var(--iot-line); }
+
+/* ---------- Impressão ---------- */
+@media print {
+  .site-nav, .btn, .skip-link { display: none !important; }
+  body, .info-card, .flow-card, .proposal-card {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+}
